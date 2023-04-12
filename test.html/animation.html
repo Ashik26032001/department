@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #anim{
+            background-color:red;
+            height: 60px;
+            width: 50px;
+            position: relative;
+            border-radius: 70%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="anim"></div>
+    <div><Button onclick="Click()">Animate</Button></div>
+
+
+    <script>
+        const elem = document.getElementById("anim")
+        function Click() {
+            var left = 0
+            var right = 300
+            var id = setInterval(Move, 1)
+            function Move() {
+                if (left < 300 && right == 300) {
+                    left++;
+                    elem.style.left = left + "px";
+                    elem.style.top = left + "px";
+                } else if (right > 0) {
+                    right--;
+                    elem.style.left = right + "px";
+                    elem.style.top = right + "px"
+
+                }
+            }
+        }
+    </script>
+
+
+</body>
+
+</html>

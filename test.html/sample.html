@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <title>Document</title>
+</head>
+
+<body>
+    <style>
+        .data{
+            background-color: brown;
+            text-align: center;
+           
+        }
+    </style>
+
+    <div class="hi" onclick="Click(event)">
+        MouseOver
+
+    </div>
+    <div class="hi" onmouseover="Click(event)">
+        Mousedown
+
+    </div>
+    <div id="click" onmouseover="Click(event)">
+        hello
+
+    </div>
+    <div id="click" onmouseenter="Click(event)">
+        hi
+
+    </div>
+    
+    <script>
+        // const elem1 = document.getElementById("click")
+        function Document() {
+            alert("mouse over")
+
+        }
+
+        function Click(e) { 
+            console.log(e)
+            const elem = e.target
+            elem.classList.toggle("data")
+            if (elem.style.backgroundColor == "blue") {
+                elem.style.backgroundColor = "red";
+            }
+
+            else if(elem.style.backgroundColor == "red"){
+                elem.style.cssText="width:400px;height:400px;background-color:yellow;border-radius:50%;align-items:center;display:flex;justify-content:center;font-size:50px;"
+            }
+            
+            else {
+                elem.style.backgroundColor = "blue"
+            }
+        }
+    </script>
+
+</body>
+
+</html>

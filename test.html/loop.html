@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="listen">hello</div>
+    <p>hello</p>
+    <div class="new">
+    <p>hi</p></div>
+    <div class="hi">hello</div>
+    <p class="hi" id="hy">welcome</p>
+    <div>ashik</div>
+    <p>hbuh</p>
+    <p>hbuh</p>
+
+
+    <script>
+        const idelem=document.getElementById("listen")
+        const clselem1=document.getElementsByClassName("new")
+        const clselem2=document.getElementsByClassName("hi")
+        const divelem= document.getElementsByTagName("div")
+        const pelem=document.getElementsByTagName("p")
+        const pelem2=document.getElementById("hy")
+        console.log(pelem2)
+        console.log(clselem1)
+        console.log(pelem)
+
+        idelem.style.fontSize="40px"
+
+        for(let i=0;i<clselem2.length;i++){
+            clselem2[i].style.fontSize ="40px"
+        }
+        // for(let i=0;i<pelem2.length;i++){
+            pelem2.style.color ="green"
+            pelem2.style.background ="RED"
+            pelem2.style.textAlign ="center"
+
+        // }
+
+        for(let i=0;i<clselem1.length;i++){
+            clselem2[i].style.color ="red"
+        }
+        for(i=0;i<divelem.length;i++){
+            divelem[i].style.backgroundColor ="orange"
+        }
+        console.log("working")
+        // var i=5
+        // while(i<10){
+        //     i++;
+        //     console.log(i)
+        // }
+        
+
+
+    </script>
+    
+</body>
+</html>
